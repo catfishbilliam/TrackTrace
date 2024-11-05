@@ -13,14 +13,18 @@ TrackTrace is a web application that analyzes and visualizes your music listenin
 ## Installation
 
 1. **Clone the repository**:
+    ```sh
     git clone https://github.com/YOUR_GITHUB_USERNAME/TrackTrace.git
+    cd TrackTrace
     ```
 
 2. **Install dependencies**:
+    ```sh
     npm install
     ```
 
 3. **Start the server**:
+    ```sh
     node server.js
     ```
 
