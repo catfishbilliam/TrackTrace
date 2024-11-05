@@ -361,13 +361,20 @@ p {
 
 @media (max-width: 768px) {
     .content-layout {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        
     }
 
     .data-container,
     .charts-container,
     .spotify-player {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         margin-top: 10px;
     }
