@@ -359,10 +359,14 @@ p {
     100% { transform: rotate(360deg); }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .container {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .spotify-player {
