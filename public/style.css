@@ -361,27 +361,25 @@ p {
 
 @media (max-width: 768px) {
     .wrapper {
-        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .content {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
     }
 
     .content-layout {
         flex-direction: column;
+        gap: 20px;
         width: 100%;
     }
 
     .data-container,
     .charts-container,
     .spotify-player {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         margin-top: 10px;
     }
@@ -391,3 +389,4 @@ p {
         max-height: none;
     }
 }
+
