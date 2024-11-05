@@ -1,0 +1,14 @@
+{
+    "name": "spotify-data-analysis",
+    "version": "1.0.0",
+    "description": "App to analyze Spotify extended listening history data",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "chartjs-adapter-date-fns": "^3.0.0",
+        "express": "^4.17.1"
+    }
+}
