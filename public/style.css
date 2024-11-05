@@ -363,6 +363,7 @@ p {
     .wrapper {
         padding: 0 20px;
         box-sizing: border-box;
+        overflow: auto;
     }
 
     .content {
@@ -382,6 +383,7 @@ p {
     .spotify-player {
         width: 100%;
         margin-top: 10px;
+        overflow: auto;
     }
 
     .data-container,
