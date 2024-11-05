@@ -359,3 +359,14 @@ p {
     100% { transform: rotate(360deg); }
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spotify-player {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
