@@ -385,7 +385,7 @@ p {
         width: 100%;
         margin-top: 10px;
         overflow-y: auto;
-        max-height: 300px;
+        max-height: 1440px;
     }
 
     .data-container,
