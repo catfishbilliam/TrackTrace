@@ -359,18 +359,21 @@ p {
     100% { transform: rotate(360deg); }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    .container {
-        display: flex;
+    .content-layout {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 100%;
     }
 
+    .data-container,
+    .charts-container,
     .spotify-player {
         width: 100%;
         margin-top: 10px;
+    }
+
+    .data-container,
+    .charts-container {
+        max-height: none;
     }
 }
