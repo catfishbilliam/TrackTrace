@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oxygen:wght@700&display=swap");
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: #FFFDD0; /* Cream */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 2400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent gap between elements */
+    align-items: stretch;
+    height: calc(100vh - 20px); /* Adjusted to account for the gap */
+    padding-bottom: 20px; /* Consistent padding */
+    box-sizing: border-box;
+}
+
+.spotify-player {
+    width: 100%;
+    margin-top: 20px; /* Consistent margin */
+    margin-bottom: 20px; /* Consistent margin */
+    flex: 0 0 auto; /* Prevents the player from growing or shrinking */
+}
+
+.content {
+    display: flex;
+    flex: 1; /* Allows the content to take up the remaining space */
+    gap: 20px; /* Consistent gap between elements */
+}
+
+.content-layout {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background: #FA8072; /* Salmon */
+    border-radius: 20px;
+    padding: 20px;
+    width: 40%;
+    max-height: calc(100vh - 340px); /* Adjust the max-height as needed */
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex: 1; /* Allows the data container to grow and take up available space */
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.year-box {
+    background-color: #D63939; /* Red */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.season ul li, .data-container p {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+    font-size: 0.9em;
+    margin: 4px 0;
+}
+
+.charts-container {
+    background: #007B7F; /* Dark Blue */
+    border-radius: 20px;
+    padding: 20px;
+    width: 60%;
+    max-height: calc(100vh - 340px); /* Adjust the max-height as needed */
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Consistent gap between elements */
+    text-align: center;
+    flex: 1; /* Allows the charts container to grow and take up available space */
+}
+
+.chart-box {
+    background-color: #F8C64D; /* Yellow */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Consistent margin */
+}
+
+.year-container {
+    margin: 10px auto; /* Center the container */
+    padding: 10px;
+    border: 2px solid #007B7F; /* Salmon color for border */
+    border-radius: 12px; /* More pronounced rounded corners */
+    background-color: #FFDEAD; /* Cream background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.season-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Center the container */
+    padding: 10px;
+    border: 2px solid #FA8072; /* Salmon color for border */
+    border-radius: 12px; /* More pronounced rounded corners */
+    background-color: #008080; /* Teal background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.year-heading {
+    cursor: pointer; /* Change cursor to pointer */
+    background-color: #FFDEAD; /* Navajo white for header */
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 10px; /* Slightly round header corners */
+    font-family: 'Bungee Inline', sans-serif; /* Retro font */
+    color: #333; /* Darker text color for contrast */
+    text-align: center; /* Centered text */
+}
+
+.season-heading {
+    cursor: pointer; /* Change cursor to pointer */
+    background-color: #F8C64D; /* Yellow background for header */
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 10px; /* Slightly round header corners */
+    font-family: 'Bungee Inline', sans-serif; /* Retro font */
+    color: #333; /* Darker text color for contrast */
+    text-align: center; /* Centered text */
+    width: 40%;
+}
+
+.year-heading:hover, .season-heading:hover {
+    background-color: #FFA07A; /* Lighter salmon on hover */
+}
+
+.year-content {
+    padding: 12px;
+    display: none;
+    background-color: #FFDEAD; /* White background for content */
+    border-top: 2px solid #FA8072; /* Salmon color for top border */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    box-sizing: border-box;
+}
+
+.season-content {
+    padding: 12px;
+    display: none;
+    background-color: #FFDEAD; /* White background for content */
+    border-top: 2px solid #FA8072; /* Salmon color for top border */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    box-sizing: border-box;
+}
+
+.track {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #FA8072; /* Salmon color for border */
+    border-radius: 12px; /* More pronounced rounded corners */
+    background-color: rgba(250, 128, 114, 0.1); /* Light salmon background for retro feel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+h1, h2 {
+    font-family: 'Bungee Inline', sans-serif;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+ol {
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+.artist-name {
+    font-weight: bold;
+}
+
+.track-name {
+    font-weight: bold;
+}
+
+.music {
+    font-weight: bold;
+}
+
+.podcast {
+    font-weight: bold;
+}
+
+ol li {
+    margin-left: 0;
+}
+
+p{
+    color:#333;
+}
+
+/* Ensure everything stacks in a column inside Time of Day */
+.time-of-day-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make Overall Totals always visible */
+.overall-totals {
+    background-color: #FFDEAD; /* Cream background */
+    padding: 12px;
+    border: 2px solid #FA8072; /* Salmon color for border */
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.summary-section {
+    margin: 20px 0; /* Keep the summary section the same */
+    padding: 20px;
+    border: 2px solid #FA8072; /* Salmon color for border */
+    border-radius: 12px; /* More pronounced rounded corners */
+    background-color: #FFDEAD; /* Cream background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.summary-section h2 {
+    font-family: 'Bungee Inline', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.summary-section p {
+    font-family: 'Oxygen', sans-serif;
+    color: #333;
+    margin: 5px 0;
+}
+
+#dataComparison {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.data-container, .charts-container {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f9f9f9;
+}
+
+.data-container::-webkit-scrollbar, .charts-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.data-container::-webkit-scrollbar-thumb, .charts-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.data-container::-webkit-scrollbar-track, .charts-container::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}

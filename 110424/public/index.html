@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackTrace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="spotify-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2RjNktNqo1PEKtuq5uOT58?utm_source=generator&theme=0" width="100%" height="152" margin="20px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="content-layout">
+            <div class="content">
+                <div class="data-container">
+                    <h1>TrackTrace: Unravel the Sounds of Your Life</h1>
+                    <select id="dataComparison" onchange="updateText()">
+                        <option value="monthlyTrends">Artists by the Year & Season</option>
+                        <option value="popularityOverTime">Your Favorite Tracks</option>
+                        <option value="contentTrends">Music vs. Podcasts</option>
+                        <option value="timeOfDay">Time of Day</option>
+                        <option value="summary">Ten-Year Summary</option> 
+                    </select>
+                    <div id="mainContainer" class="main-container"></div>
+                </div>
+                <div class="charts-container">
+                    <div id="chartContainer" class="chart-box"></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
