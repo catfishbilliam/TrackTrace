@@ -3,11 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
 
-
+// Removed the duplicate app.listen() call
 app.use(express.static("public"));
 
 app.get("/analyze", (req, res) => {
@@ -41,6 +38,7 @@ app.get("/analyze", (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Corrected app.listen() call
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });

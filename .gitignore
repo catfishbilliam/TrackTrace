@@ -1,0 +1,17 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+.env
+.vscode/
+.idea/
+dist/
+build/
+jspm_packages/
+*.tmp
+*.swp
+/.heroku/
+package-lock.json
+yarn.lock
